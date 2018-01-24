@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+<!-- Start NewsCenter -->
+        <include name="HomeSubMenuNews">
+
+
+                <control type="image" id="50100">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+                </control>
+
+                <control type="button" id="50115">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Tagesschau in 100s</label>
+                        <visible>String.IsEqual(Window(Home).Property(NewsCenter.Visible.Tagesschau100),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_tagesschau_100")</onclick>
+                </control>
+                <control type="button" id="50101">
+                        <include>ButtonHomeSubCommonValues</include>
+			<label>Tagesschau</label>
+			<visible>String.IsEqual(Window(Home).Property(NewsCenter.Visible.Tagesschau),true)</visible>
+			<!--<visible>String.IsEqual(Window(Home).Property(NewsCenter.Visible.Tagesschau), true)</visible> -->
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_tagesschau")</onclick>
+                </control>
+                <control type="button" id="50118">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>MDR Aktuell 130s</label>
+                        <visible>String.IsEqual(Window.Property(NewsCenter.Visible.NDRKompakt),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_mdr_aktuell_130")</onclick>
+                </control>
+                <control type="button" id="50119">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Kinder News</label>
+                        <visible>String.IsEqual(Window.Property(NewsCenter.Visible.KinderNachrichten),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_kinder_nachrichten")</onclick>
+                </control>
+                <control type="button" id="50120">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>BR Rundschau 100s</label>
+                        <visible>String.IsEqual(Window(Home).Property(NewsCenter.Visible.BRRundschau100),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_rundschau100")</onclick>
+                </control>
+                <control type="button" id="50121">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>NDR Aktuell kompakt</label>
+                        <visible>String.IsEqual(Window.Property(NewsCenter.Visible.NDRKompakt),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_ndraktuellkompakt")</onclick>
+                </control>
+
+
+                <control type="button" id="50116">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Feed Auswahl</label>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=show_select_dialog")</onclick>
+                </control>
+
+                <control type="button" id="50122">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Live</label>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=show_livestream_select_dialog")</onclick>
+                </control>
+
+                <control type="button" id="50117">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Sport</label>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=show_buli_select")</onclick>
+                </control>
+
+                <control type="image" id="90126">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3">HomeSubEnd.png</texture>
+                </control>
+        </include>
+
+
+        <include name="HomeSubMenuNewsWetter">
+
+
+                <control type="image" id="561001">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+                </control>
+                <control type="button" id="561021">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Wetter in 60s</label>
+                        <visible>String.IsEqual(Window.Property(NewsCenter.Visible.Wetter60),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_wetteronline")</onclick>
+                </control>
+                <control type="button" id="561031">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Wetter.info</label>
+                        <visible>String.IsEqual(Window.Property(NewsCenter.Visible.WetterInfo),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_wetterinfo")</onclick>
+                </control>
+                <control type="button" id="561032">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Wetter.net</label>
+                        <visible>String.IsEqual(Window.Property(NewsCenter.Visible.WetterNet),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_wetternet")</onclick>
+                </control>
+                <control type="button" id="561033">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Tagesschau Wetter</label>
+                        <visible>String.IsEqual(Window.Property(NewsCenter.Visible.TagesschauWetter),true)</visible>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=play_tagesschauwetter")</onclick>
+                </control>
+                <control type="button" id="561034">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Wetter Karten Region</label>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=show_wetter_karte_bundesland")</onclick>
+                </control>
+                <control type="button" id="561035">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Unwetter Karten</label>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=show_wetter_karte")</onclick>
+                </control>
+                <control type="button" id="561036">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Unwetter Warnungen</label>
+                        <onclick>RunScript(plugin.program.newscenter,"?methode=show_unwetter_warnungen")</onclick>
+                        <visible>!String.IsEqual(Window(Home).Property(NewsCenter.Unwetter.Anzahl),0)</visible>
+                </control>
+                <control type="image" id="90126">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3">HomeSubEnd.png</texture>
+                </control>
+        </include>
+<!-- Ende NewsCenter -->
+
+	<include name="HomeSubMenuVideos">
+		<control type="image" id="90101">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90102">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>342</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+		</control>
+		<control type="button" id="90103">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20343</label>
+			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
+			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+		</control>
+		<control type="button" id="90104">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>20389</label>
+			<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+			<visible>Library.HasContent(MusicVideos)</visible>
+		</control>
+		<control type="button" id="90105">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>744</label>
+			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+		</control>
+		<control type="button" id="90106">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14022</label>
+			<onclick>ActivateWindow(Videos,Root)</onclick>
+			<visible>Library.HasContent(Video)</visible>
+		</control>
+		<control type="button" id="90107">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+		<control type="image" id="90108">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMovies">
+		<control type="image" id="90161">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90162">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90160).ListItemNoWrap(0).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(0).FileNameAndPath],return)</onclick>
+		</control>
+		<control type="button" id="90163">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90160).ListItemNoWrap(1).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(1).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(1).Label)</visible>
+		</control>
+		<control type="button" id="90164">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90160).ListItemNoWrap(2).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(2).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(2).Label)</visible>
+		</control>
+		<control type="button" id="90165">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90160).ListItemNoWrap(3).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(3).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(3).Label)</visible>
+		</control>
+		<control type="button" id="90166">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90160).ListItemNoWrap(4).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(4).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(4).Label)</visible>
+		</control>
+		<control type="button" id="90167">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90160).ListItemNoWrap(5).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90160).ListItemNoWrap(5).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90160).ListItemNoWrap(5).Label)</visible>
+		</control>
+		<control type="image" id="90168">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuTVShows">
+		<control type="image" id="90171">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90172">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90170).ListItemNoWrap(0).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90170).ListItemNoWrap(0).FileNameAndPath],return)</onclick>
+		</control>
+		<control type="button" id="90173">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90170).ListItemNoWrap(1).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90170).ListItemNoWrap(1).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90170).ListItemNoWrap(1).Label)</visible>
+		</control>
+		<control type="button" id="90174">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90170).ListItemNoWrap(2).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90170).ListItemNoWrap(2).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90170).ListItemNoWrap(2).Label)</visible>
+		</control>
+		<control type="button" id="90175">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90170).ListItemNoWrap(3).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90170).ListItemNoWrap(3).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90170).ListItemNoWrap(3).Label)</visible>
+		</control>
+		<control type="button" id="90176">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90170).ListItemNoWrap(4).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90170).ListItemNoWrap(4).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90170).ListItemNoWrap(4).Label)</visible>
+		</control>
+		<control type="button" id="90177">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90170).ListItemNoWrap(5).Label]</label>
+			<onclick>ActivateWindow(Videos,$INFO[Container(90170).ListItemNoWrap(5).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90170).ListItemNoWrap(5).Label)</visible>
+		</control>
+		<control type="image" id="90178">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuMusic">
+		<control type="image" id="90111">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90112">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90110).ListItemNoWrap(0).Label]</label>
+			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(0).FileNameAndPath],return)</onclick>
+		</control>
+		<control type="button" id="90113">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90110).ListItemNoWrap(1).Label]</label>
+			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(1).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90110).ListItemNoWrap(1).Label)</visible>
+		</control>
+		<control type="button" id="90114">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90110).ListItemNoWrap(2).Label]</label>
+			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(2).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90110).ListItemNoWrap(2).Label)</visible>
+		</control>
+		<control type="button" id="90115">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90110).ListItemNoWrap(3).Label]</label>
+			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(3).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90110).ListItemNoWrap(3).Label)</visible>
+		</control>
+		<control type="button" id="90116">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90110).ListItemNoWrap(4).Label]</label>
+			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(4).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90110).ListItemNoWrap(4).Label)</visible>
+		</control>
+		<control type="button" id="90117">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$INFO[Container(90110).ListItemNoWrap(5).Label]</label>
+			<onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(5).FileNameAndPath],return)</onclick>
+			<visible>!String.IsEmpty(Container(90110).ListItemNoWrap(5).Label)</visible>
+		</control>
+		<control type="image" id="90119">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuSystem">
+		<control type="image" id="90121">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90122">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>5</label>
+			<onclick>ActivateWindow(Settings)</onclick>
+		</control>
+		<control type="button" id="90123">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>7</label>
+			<onclick>ActivateWindow(FileManager)</onclick>
+		</control>
+		<control type="button" id="90124">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+		</control>
+		<control type="button" id="90125">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>130</label>
+			<onclick>ActivateWindow(SystemInfo)</onclick>
+		</control>
+		<control type="button" id="90126">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>14111</label>
+			<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+			<visible>system.getbool(eventlog.enabled)</visible>
+		</control>
+		<control type="image" id="90127">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPlayDisc">
+		<control type="image" id="90131">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90132">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>13391</label>
+			<onclick>SetFocus(9000)</onclick>
+			<onclick>EjectTray()</onclick>
+		</control>
+		<control type="image" id="90133">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuPictures">
+		<control type="image" id="90147">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90148">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>24001</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		</control>
+		<control type="image" id="90149">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+
+	<include name="HomeSubMenuHaus">
+		<control type="image" id="90447">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90448">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Live Kamera</label>
+			<onclick>PlayMedia("http://<camuser>:<campw>@<camip>/mjpeg/stream.cgi?chn=0|auth=digest")</onclick>
+		</control>
+
+		<control type="button" id="90450">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Kamera Aufnahmen</label>
+			<onclick>ActivateWindow(videos,"/home/osmc/kamera/",return)</onclick>
+		</control>
+		<control type="button" id="90452">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Kamera Snapshots</label>
+			<onclick>ActivateWindow(pictures,"/home/osmc/kameradav/PlanSnap/",return)</onclick>
+		</control>
+
+		<control type="button" id="90457">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Lampen</label>
+			<onclick>RunScript(plugin.program.fhemcontrol,"?methode=show_sets_window&amp;file=fhemsetlampen.json&amp;title=$INFO[FHEMControl.Title]")</onclick>
+		</control>
+		<control type="button" id="90458">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Heizung</label>
+			<onclick>RunScript(plugin.program.fhemcontrol,"?methode=show_sets_window&amp;file=fhemsetheizung.json")</onclick>
+		</control>
+
+
+		<control type="image" id="90459">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+
+
+	<include name="HomeSubMenuTV">
+		<control type="image" id="90141">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+
+
+
+                <control type="button" id="90156">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>EPG View $INFO[Control.IsVisible(494949)]</label>
+                        <onclick>Skin.SetString(TVview.Mode,"5734")</onclick>
+                        <onclick>ActivateWindow(tvchannels)</onclick>
+                        <visible>Container(9000).Hasfocus(12)</visible> 
+                        <ondown condition="Control.IsVisible(494949) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4949491</ondown>
+                        <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
+                        <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
+                </control>
+<!--                <control type="button" id="90157">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>EPG View</label>
+                        <onclick>Skin.SetString(TVview.Mode,"5734")</onclick>
+                        <onclick>ActivateWindow(tvchannels)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+                </control>
+-->
+
+
+
+                <control type="button" id="90158">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Kanäle</label>
+                        <onclick>Skin.SetString(TVview.Mode,"5732")</onclick>
+                        <onclick>ActivateWindow(tvchannels)</onclick>
+
+                        <ondown condition="Control.IsVisible(494949) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4949491</ondown>
+                        <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
+                        <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
+                        <visible>Container(9000).Hasfocus(12)</visible> 
+                </control>
+<!--                <control type="button" id="90159">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Kanäle</label>
+                        <onclick>Skin.SetString(TVview.Mode,"5732")</onclick>
+                        <onclick>ActivateWindow(tvchannels)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+                </control>
+-->
+
+
+<!-- Start TVHightlights -->
+                <control type="button" id="97155">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>$ADDON[plugin.program.tvhighlights 30011]</label>
+                        <onclick>RunScript(plugin.program.tvhighlights,"?methode=show_select_dialog")</onclick>
+
+                        <ondown condition="Control.IsVisible(494949) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4949491</ondown>
+                        <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
+                        <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
+                        <visible>Container(9000).Hasfocus(12)</visible> 
+                </control>
+<!--                <control type="button" id="97149">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>$ADDON[plugin.program.tvhighlights 30011]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,"?methode=show_select_dialog")</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+                </control>
+-->
+<!-- Ende TVHightlights -->
+<!--
+		<control type="button" id="90150">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19019</label>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+                        <ondown>474747</ondown>
+                        <visible>Container(9000).Hasfocus(12) + !String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible> 
+		</control>
+-->
+<!--
+		<control type="button" id="90143">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19019</label>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+		</control>
+-->
+		<control type="button" id="90151">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>22020</label>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+
+                        <ondown condition="Control.IsVisible(494949) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4949491</ondown>
+                        <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
+                        <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
+                        <visible>Container(9000).Hasfocus(12)</visible> 
+	 	</control>
+
+<!--		<control type="button" id="90144">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>22020</label>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+		</control>
+-->
+<!--
+		<control type="button" id="90152">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19163</label>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+
+                        <ondown condition="Control.IsVisible(494949) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4949491</ondown>
+                        <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
+                        <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
+                        <visible>Container(9000).Hasfocus(12)</visible> 
+	 	</control>
+		<control type="button" id="90145">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19163</label>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+		</control>
+
+		<control type="button" id="90153">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19138</label>
+			<onclick>ActivateWindow(TVTimerRules)</onclick>
+			<ondown>474747</ondown>
+			<visible>Container(9000).Hasfocus(12) + !String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible> 
+		</control>
+		<control type="button" id="90146">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19138</label>
+			<onclick>ActivateWindow(TVTimerRules)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+		</control>
+
+		<control type="button" id="90154">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19040</label>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<ondown>474747</ondown>
+			<visible>Container(9000).Hasfocus(12) + !String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible> 
+		</control>
+		<control type="button" id="90147">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19040</label>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+		</control>
+-->
+		<control type="button" id="90155">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>137</label>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+
+                        <ondown condition="Control.IsVisible(494949) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4949491</ondown>
+                        <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
+                        <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
+                        <visible>Container(9000).Hasfocus(12)</visible> 
+		</control>
+<!--		<control type="button" id="90148">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>137</label>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
+		</control>
+-->
+		<control type="image" id="90149">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeSubMenuRadio">
+		<control type="image" id="90141">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+		</control>
+		<control type="button" id="90243">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Radiokanäle (SAT)</label>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+		</control>
+
+		<control type="button" id="90244">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Prime Music</label>
+			<onclick>RunAddon(plugin.audio.prime_music)</onclick>
+		</control>
+		<control type="button" id="90245">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>YouTube Music</label>
+			<onclick>RunAddon(plugin.video.spotitube)</onclick>
+		</control>
+
+
+
+<!--
+		<control type="button" id="90244">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>22020</label>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+		</control>
+		<control type="button" id="90245">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19163</label>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+		</control>
+		<control type="button" id="90246">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19138</label>
+			<onclick>ActivateWindow(RadioTimerRules)</onclick>
+		</control>
+		<control type="button" id="90247">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>19040</label>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+		</control>
+		<control type="button" id="90248">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>137</label>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+		</control>
+
+-->
+		<control type="image" id="90249">
+			<width>35</width>
+			<height>35</height>
+			<texture border="0,0,0,3">HomeSubEnd.png</texture>
+		</control>
+	</include>
+	<include name="HomeAddonItemsVideos">
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton1))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton1)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton1))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeVideosButton1))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton2))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton2)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton2))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeVideosButton2))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton3))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton3)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton3))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeVideosButton3))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton4))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton4)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton4))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeVideosButton4))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton5))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton5)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton5))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeVideosButton5))</visible>
+		</item>
+	</include>
+	<include name="HomeAddonItemsMusic">
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton1))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton1)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton1))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeMusicButton1))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton2))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton2)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton2))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeMusicButton2))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton3))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton3)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton3))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeMusicButton3))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton4))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton4)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton4))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeMusicButton4))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeMusicButton5))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeMusicButton5)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeMusicButton5))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeMusicButton5))</visible>
+		</item>
+	</include>
+	<include name="HomeAddonItemsPictures">
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomePictureButton1))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomePictureButton1)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomePictureButton1))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomePictureButton1))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomePictureButton2))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomePictureButton2)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomePictureButton2))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomePictureButton2))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomePictureButton3))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomePictureButton3)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomePictureButton3))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomePictureButton3))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomePictureButton4))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomePictureButton4)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomePictureButton4))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomePictureButton4))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomePictureButton5))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomePictureButton5)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomePictureButton5))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomePictureButton5))</visible>
+		</item>
+	</include>
+	<include name="HomeAddonItemsPrograms">
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeProgramButton1))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeProgramButton1)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton1))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeProgramButton1))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeProgramButton2))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeProgramButton2)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton2))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeProgramButton2))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeProgramButton3))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeProgramButton3)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton3))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeProgramButton3))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeProgramButton4))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeProgramButton4)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton4))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeProgramButton4))</visible>
+		</item>
+		<item>
+			<label>$INFO[system.addontitle(Skin.String(HomeProgramButton5))]</label>
+			<onclick>RunAddon($INFO[Skin.String(HomeProgramButton5)])</onclick>
+			<icon>$INFO[system.addonicon(Skin.String(HomeProgramButton5))]</icon>
+			<thumb></thumb>
+			<visible>!String.IsEmpty(Skin.String(HomeProgramButton5))</visible>
+		</item>
+	</include>
+</includes>

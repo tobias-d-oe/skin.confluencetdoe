@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+        <include name="ScriptKNSwitchtimer">
+		<control type="group" id="494949">
+                  <depth>DepthMenu-</depth>
+                  <visible>Container(9000).Hasfocus(12) + ![String.IsEqual(Window(Home).Property(SwitchTimerActiveItems),"0") | String.IsEmpty(Window(Home).Property(SwitchTimerActiveItems))] </visible> 
+                  <include>VisibleFadeEffect</include>
+
+		  <posx>890</posx>
+		  <posy>510</posy>
+
+                  <control type="image">
+                          <description>background</description>
+                          <left>60</left>
+                          <top>0</top>
+                          <width>240</width>
+                          <height>150</height>
+                          <texture border="15">RecentAddedBack.png</texture>
+                  </control>
+
+
+                        <control type="button" id="4949491">
+                                <description>stop all kodis</description>
+                                <left>60</left>
+                                <top>0</top>
+                                <width>240</width>
+                                <height>150</height>
+                                <onleft condition="Control.IsVisible(4747471)">4747471</onleft>
+                                <onright condition="Control.IsVisible(4747471)">4747471</onright>
+
+                                <onleft condition="!Control.IsVisible(4747471)">9002</onleft>
+                                <onright condition="!Control.IsVisible(4747471)">20</onright>
+                                <onup>9002</onup>
+                                <ondown>20</ondown>
+
+
+                                <texturefocus>folder-focus.png</texturefocus>
+                                <texturenofocus>button-nofocus.png</texturenofocus>
+                                <onclick>Notification("Umschalttimer","Entferne alle Umschalttimer",10000,/home/osmc/.kodi/addons/service.kn.switchtimer/icon.png)</onclick>
+				<onclick>RunScript(service.kn.switchtimer,action=delall)</onclick>
+                                <onclick>Control.SetFocus(9000)</onclick>
+                                <include>VisibleFadeEffect</include>
+                        </control>
+
+
+
+
+
+
+
+
+
+            	  <control type="label">
+		    <description>Title</description>
+		    <posx>124</posx>
+		    <posy>5</posy>
+		    <width>160</width>
+		    <height>20</height>
+     		    <font>font12</font>
+		    <textcolor>grey</textcolor>
+                    <label>Umschalttimer</label>
+		  </control>
+
+
+
+<!-- Switchtimer 1 Start -->
+            	  <control type="image">
+		    <description>Kodi-channel-logo 4 switchtimer</description>
+		    <posx>80</posx>
+		    <posy>28</posy>
+		    <width>50</width>
+		    <height>30</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window(Home).Property(t0:icon)]</texture>
+		  </control>
+
+		  <control type="label">
+		    <description>FHT1destemp</description>
+		    <posx>140</posx>
+		    <posy>28</posy>
+		    <width>150</width>
+		    <height>20</height>
+     		    <font>font12</font>
+		    <textcolor>white</textcolor>
+                    <label>$INFO[Window(Home).Property(t0:date)]</label>
+		  </control>
+
+<!-- Switchtimer 1 END-->
+<!-- Switchtimer 2 Start -->
+            	  <control type="image">
+		    <description>Kodi-channel-logo 4 switchtimer</description>
+		    <posx>80</posx>
+		    <posy>58</posy>
+
+		    <width>50</width>
+		    <height>30</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window(Home).Property(t1:icon)]</texture>
+		  </control>
+
+		  <control type="label">
+		    <description>FHT1destemp</description>
+		    <posx>140</posx>
+		    <posy>58</posy>
+		    <width>150</width>
+		    <height>20</height>
+     		    <font>font12</font>
+		    <textcolor>white</textcolor>
+                    <label>$INFO[Window(Home).Property(t1:date)]</label>
+		  </control>
+
+
+
+
+<!-- Switchtimer 2 END-->
+<!-- Switchtimer 3 Start -->
+            	  <control type="image">
+		    <description>Kodi-channel-logo 4 switchtimer</description>
+		    <posx>80</posx>
+		    <posy>88</posy>
+
+		    <width>50</width>
+		    <height>30</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window(Home).Property(t2:icon)]</texture>
+		  </control>
+
+		  <control type="label">
+		    <description>FHT1destemp</description>
+		    <posx>140</posx>
+		    <posy>88</posy>
+		    <width>150</width>
+		    <height>20</height>
+     		    <font>font12</font>
+		    <textcolor>white</textcolor>
+                    <label>$INFO[Window(Home).Property(t2:date)]</label>
+		  </control>
+<!-- Switchtimer 3 END-->
+<!-- Switchtimer 4 Start -->
+            	  <control type="image">
+		    <description>Kodi-channel-logo 4 switchtimer</description>
+		    <posx>80</posx>
+		    <posy>118</posy>
+
+		    <width>50</width>
+		    <height>30</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window(Home).Property(t3:icon)]</texture>
+		  </control>
+
+		  <control type="label">
+		    <description>FHT1destemp</description>
+		    <posx>140</posx>
+		    <posy>118</posy>
+		    <width>150</width>
+		    <height>20</height>
+     		    <font>font12</font>
+		    <textcolor>white</textcolor>
+                    <label>$INFO[Window(Home).Property(t3:date)]</label>
+		  </control>
+
+<!-- Switchtimer 4 END-->
+
+
+
+
+
+
+		</control>
+
+	    </include>
+</includes>
+

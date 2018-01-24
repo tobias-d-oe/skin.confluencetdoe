@@ -1,0 +1,267 @@
+--- 720p/script-news.xml
++++ 720p/script-news.xml
+@@ -101,9 +101,6 @@
+                                                         <align>left</align>
+                                                         <aligny>top</aligny>
+                                                         <label>$INFO[ListItem.Property(comment)]</label>
+-                                                        <scroll>true</scroll>
+-                                                        <scrollspeed>50</scrollspeed>
+-                                                        <autoscroll delay="5000" time="5000" repeat="10000">!IsEmpty($INFO[ListItem.Property(comment)])</autoscroll>
+ 
+                                                 </control>
+ 
+@@ -210,9 +207,6 @@
+                                                         <aligny>top</aligny>
+                                                         <label>$INFO[ListItem.Property(comment)]</label>
+                                                         <visible>!Control.HasFocus(77777)</visible>
+-                                                        <scroll>true</scroll>
+-                                                        <scrollspeed>50</scrollspeed>
+-                                                        <autoscroll delay="5000" time="5000" repeat="10000">!IsEmpty($INFO[ListItem.Property(comment)])</autoscroll>
+ 
+                                                 </control>
+                                                 <control type="textbox" id="moviecommentblue">
+@@ -228,9 +222,8 @@
+                                                         <aligny>top</aligny>
+                                                         <label>$INFO[ListItem.Property(comment)]</label>
+                                                         <visible>Control.HasFocus(77777)</visible>
+-                                                        <scroll>true</scroll>
+-                                                        <scrollspeed>50</scrollspeed>
+-                                                        <autoscroll delay="5000" time="5000" repeat="10000">!IsEmpty($INFO[ListItem.Property(comment)])</autoscroll>
++                                                        <scrolltime>200</scrolltime>
++                                                        <autoscroll delay="2000" time="4000" repeat="10000">true</autoscroll>
+                                                 </control>
+ 
+ 
+@@ -281,9 +274,9 @@
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.2.HeaderPic)]</property>
+ 
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.2.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.2.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.2.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.2.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.2.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -295,9 +288,9 @@
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.3.HeaderPic)]</property>
+ 
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.3.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.3.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.3.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.3.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.3.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -310,9 +303,9 @@
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.4.HeaderPic)]</property>
+ 
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.4.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.4.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.4.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.4.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.4.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -325,9 +318,9 @@
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.5.HeaderPic)]</property>
+ 
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.5.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.5.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.5.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.5.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.5.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -340,9 +333,9 @@
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.6.HeaderPic)]</property>
+ 
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.6.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.6.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.6.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.6.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.6.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -356,9 +349,9 @@
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.7.HeaderPic)]</property>
+ 
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.7.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.7.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.7.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.7.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.7.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -370,9 +363,9 @@
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.8.HeaderPic)]</property>
+ 
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.8.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.8.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.8.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.8.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.8.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -383,9 +376,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.9.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.9.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.9.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.9.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.9.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.9.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.9.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -397,9 +390,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.10.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.10.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.10.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.10.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.10.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.10.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.10.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -411,9 +404,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.11.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.11.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.11.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.11.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.11.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.11.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.11.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -425,9 +418,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.12.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.12.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.12.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.12.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.12.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.12.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.12.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -440,9 +433,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.13.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.13.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.13.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.13.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.13.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.13.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.13.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -453,9 +446,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.14.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.14.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.14.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.14.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.14.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.14.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.14.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -467,9 +460,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.15.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.15.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.15.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.15.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.15.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.15.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.15.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -480,9 +473,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.16.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.16.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.16.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.16.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.16.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.16.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.16.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -494,9 +487,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.17.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.17.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.17.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.17.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.17.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.17.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.17.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -507,9 +500,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.18.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.18.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.18.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.18.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.18.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.18.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.18.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -522,9 +515,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.19.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.19.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.19.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.19.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.19.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.19.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.19.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -537,9 +530,9 @@
+                                                         <property name="comment">$INFO[Window.Property(LatestNews.20.Desc)]</property>
+                                                         <property name="headerpic">$INFO[Window.Property(LatestNews.20.HeaderPic)]</property>
+                                                         <onclick>-</onclick>
+-                                                        <icon>$INFO[Window.Property(TVHighlightsToday.20.Logo)]</icon>
++                                                        <icon>$INFO[Window.Property(LatestNews.20.Logo)]</icon>
+                                                         <visible>!IsEmpty(Window.Property(LatestNews.20.Title))</visible>
+-                                                        <actualicon>$INFO[Window.Property(TVHighlightsToday.20.Logo)]</actualicon>
++                                                        <actualicon>$INFO[Window.Property(LatestNews.20.Logo)]</actualicon>
+ 
+                                                 </item>
+ 
+@@ -578,3 +571,4 @@
+ 	</include>
+ </includes>
+ 
++
