@@ -129,6 +129,18 @@
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 -->
+                        <control type="button" id="3807">
+                                <width>55</width>
+                                <height>55</height>
+                                <font></font>
+                                <texturefocus>OSDrezapFO.png</texturefocus>
+                                <texturenofocus>OSDrezapNF.png</texturenofocus>
+                                <label></label>
+                                <onclick>RunAddon(service.rezap)</onclick> 
+                                <visible>VideoPlayer.Content(LiveTV) +  System.HasAddon(service.rezap)</visible>
+                        </control>
+
+
 			<control type="button" id="306">
 				<width>55</width>
 				<height>55</height>
@@ -151,7 +163,7 @@
                                 <onclick>ActivateWindow(4118)</onclick>
 <!--                                <onclick>Dialog.Close(VideoOSD)</onclick>
                                 <onclick>ActivateWindow(PVRGuideInfo)</onclick>
--->                                <visible>VideoPlayer.Content(LiveTV)</visible>
+-->                                <visible>VideoPlayer.Content(LiveTV) +  System.HasAddon(script.pvrepg)</visible>
                         </control>
 
 
