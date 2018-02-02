@@ -26,18 +26,14 @@
                                 <height>150</height>
                             <onright condition="Control.IsVisible(4949491)">4949491</onright>
                             <onleft condition="Control.IsVisible(4949491)">4949491</onleft>
-<!--                        <onleft>9000</onleft>
-                        <onright>9000</onright>
--->                        <onup>9002</onup>
+                        <onup>9002</onup>
                         <ondown>20</ondown>
 
 
                                 <texturefocus>folder-focus.png</texturefocus>
                                 <texturenofocus>button-nofocus.png</texturenofocus>
-                                <onclick>Notification("Remote Kodi Info","Stoppe PVR Streams auf allen Kodis",10000,/home/osmc/.kodi/addons/service.remotekodi/icon.png)</onclick>
-                                <onclick>RunScript(/home/osmc/kodi-priv-extensions/bin/stop-all-kodi.py)</onclick>
+                                <onclick>RunScript(service.remotekodi,"?methode=stopall")</onclick>
                                 <onclick>Control.SetFocus(9000)</onclick>
-<!--                                <visible>Control.HasFocus(58051) + Container(58051).HasPrevious</visible> -->
                                 <include>VisibleFadeEffect</include>
                         </control>
 
@@ -65,7 +61,7 @@
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Wohnzimmer.kodiname)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.1.kodiname)]</label>
 		  </control>
 
 		  <control type="image">
@@ -74,154 +70,154 @@
 		    <posy>28</posy>
 		    <width>30</width>
 		    <height>30</height>
-                    <texture background="true">$INFO[Window(Home).Property(Wohnzimmer.channellogo)]</texture>
+                    <texture background="true">$INFO[Window(Home).Property(kodi.1.channellogo)]</texture>
 		  </control>
 
 		  <control type="label">
-		    <description>FHT1destemp</description>
+		    <description>ChannelName</description>
 		    <posx>300</posx>
 		    <posy>28</posy>
 		    <width>150</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Wohnzimmer.channel)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.1.channel)]</label>
 		  </control>
 		  <control type="label">
-		    <description>FHT1meastemp</description>
+		    <description>Title</description>
 		    <posx>450</posx>
 		    <posy>28</posy>
 		    <width>210</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Wohnzimmer.title)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.1.title)]</label>
 		  </control>
 <!-- KODI 1 END-->
 <!-- KODI 2 Start -->
             	  <control type="label">
-		    <description>FHT1destemp</description>
+		    <description>Kodiname</description>
 		    <posx>100</posx>
 		    <posy>58</posy>
 		    <width>150</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Schlafzimmer.kodiname)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.2.kodiname)]</label>
 		  </control>
 
 		  <control type="image">
-		    <description>FHT1room</description>
+		    <description>ChannelLogo</description>
 		    <posx>260</posx>
 		    <posy>58</posy>
 		    <width>30</width>
 		    <height>30</height>
-                    <texture background="true">$INFO[Window(Home).Property(Schlafzimmer.channellogo)]</texture>
+                    <texture background="true">$INFO[Window(Home).Property(kodi.2.channellogo)]</texture>
 		  </control>
 
 		  <control type="label">
-		    <description>FHT1destemp</description>
+		    <description>ChannelName</description>
 		    <posx>300</posx>
 		    <posy>58</posy>
 		    <width>150</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Schlafzimmer.channel)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.2.channel)]</label>
 		  </control>
 		  <control type="label">
-		    <description>FHT1meastemp</description>
+		    <description>Title</description>
 		    <posx>450</posx>
 		    <posy>58</posy>
 		    <width>210</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Schlafzimmer.title)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.2.title)]</label>
 		  </control>
 <!-- KODI 2 END-->
 <!-- KODI 3 Start -->
             	  <control type="label">
-		    <description>FHT1destemp</description>
+		    <description>Kodiname</description>
 		    <posx>100</posx>
 		    <posy>88</posy>
 		    <width>150</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Kueche.kodiname)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.3.kodiname)]</label>
 		  </control>
 
 		  <control type="image">
-		    <description>FHT1room</description>
+		    <description>ChannelLogo</description>
 		    <posx>260</posx>
 		    <posy>88</posy>
 		    <width>30</width>
 		    <height>30</height>
-                    <texture background="true">$INFO[Window(Home).Property(Kueche.channellogo)]</texture>
+                    <texture background="true">$INFO[Window(Home).Property(kodi.3.channellogo)]</texture>
 		  </control>
 
 		  <control type="label">
-		    <description>FHT1destemp</description>
+		    <description>ChannelName</description>
 		    <posx>300</posx>
 		    <posy>88</posy>
 		    <width>150</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Kueche.channel)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.3.channel)]</label>
 		  </control>
 		  <control type="label">
-		    <description>FHT1meastemp</description>
+		    <description>Title</description>
 		    <posx>450</posx>
 		    <posy>88</posy>
 		    <width>210</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Kueche.title)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.3.title)]</label>
 		  </control>
 <!-- KODI 3 END-->
 <!-- KODI 4 Start -->
             	  <control type="label">
-		    <description>FHT1destemp</description>
+		    <description>Kodiname</description>
 		    <posx>100</posx>
 		    <posy>118</posy>
 		    <width>150</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Bad.kodiname)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.4.kodiname)]</label>
 		  </control>
 
 		  <control type="image">
-		    <description>FHT1room</description>
+		    <description>ChannelLogo</description>
 		    <posx>260</posx>
 		    <posy>118</posy>
 		    <width>30</width>
 		    <height>30</height>
-                    <texture background="true">$INFO[Window(Home).Property(Bad.channellogo)]</texture>
+                    <texture background="true">$INFO[Window(Home).Property(kodi.4.channellogo)]</texture>
 		  </control>
 
 		  <control type="label">
-		    <description>FHT1destemp</description>
+		    <description>ChannelName</description>
 		    <posx>300</posx>
 		    <posy>118</posy>
 		    <width>150</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Bad.channel)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.4.channel)]</label>
 		  </control>
 		  <control type="label">
-		    <description>FHT1meastemp</description>
+		    <description>Title</description>
 		    <posx>450</posx>
 		    <posy>118</posy>
 		    <width>210</width>
 		    <height>20</height>
      		    <font>font14</font>
 		    <textcolor>white</textcolor>
-                    <label>$INFO[Window(Home).Property(Bad.title)]</label>
+                    <label>$INFO[Window(Home).Property(kodi.4.title)]</label>
 		  </control>
 <!-- KODI 4 END-->
 
