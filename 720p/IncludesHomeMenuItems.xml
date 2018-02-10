@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+
+<!-- Start Sky Go -->
+        <include name="HomeSubMenuSkyGo">
+
+
+                <control type="image" id="60100">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+                </control>
+                <control type="button" id="60115">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Film Neustarts</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=listPage&path=%2fsg%2fmultiplatform%2fipad%2fjson%2flandingpage%2f32.json)</onclick>
+                </control>
+                <control type="button" id="60101">
+                        <include>ButtonHomeSubCommonValues</include>
+			<label>Filme</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=listPage&id=12)</onclick>
+                </control>
+                <control type="button" id="60118">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Serien Neustarts</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=listPage&path=%2fsg%2fmultiplatform%2fipad%2fjson%2flandingpage%2f29.json)</onclick>
+                </control>
+                <control type="button" id="60119">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Alle Serien</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=listPage&id=63)</onclick>
+                </control>
+                <control type="button" id="60120">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Doku Neustarts</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=listPage&path=%2fsg%2fmultiplatform%2fipad%2fjson%2flandingpage%2f52.json)</onclick>
+                </control>
+                <control type="button" id="60121">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Dokus</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=listPage&id=24)</onclick>
+                </control>
+
+
+                <control type="button" id="60116">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Live</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=listLiveTvChannelDirs)</onclick>
+                </control>
+
+                <control type="button" id="60122">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Suche</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.skygo.de/?action=search)</onclick>
+                </control>
+                <control type="image" id="90126">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3">HomeSubEnd.png</texture>
+                </control>
+        </include>
+
+
+
+<!-- End Sky Go -->
+
+
+
+
+
+
+
+
+
+
 <!-- Start NewsCenter -->
         <include name="HomeSubMenuNews">
 
@@ -10,7 +83,6 @@
                         <height>35</height>
                         <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
                 </control>
-
                 <control type="button" id="50115">
                         <include>ButtonHomeSubCommonValues</include>
                         <label>Tagesschau in 100s</label>

@@ -294,22 +294,7 @@
                                 <font>font13</font>
                                 <label>Skin Reload</label>
                         </control>
-			<control type="button" id="55557">
-                                <description>Restart Dreambox</description>
-                                <width>340</width>
-                                <height>40</height>
-                                <textcolor>grey2</textcolor>
-                                <focusedcolor>white</focusedcolor>
-                                <align>center</align>
-                                <textwidth>290</textwidth>
-                                <texturefocus border="25,5,25,5">ShutdownButtonFocus.png</texturefocus>
-                                <texturenofocus border="25,5,25,5">ShutdownButtonNoFocus.png</texturenofocus>
-                                <onclick>RunScript(/home/osmc/kodi-extension/bin/restart-dream.py)</onclick>
-                                <pulseonselect>no</pulseonselect>
-                                <font>font13</font>
-                                <label>Restart Dreambox</label>
-                        </control>
-			
+		
 <!--TDOe Ende-->
 			<control type="image" id="14">
 				<description>background bottom image</description>

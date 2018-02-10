@@ -39,6 +39,9 @@
        <include file="script-haus.xml" />
 <!-- Haus Ende -->
 
+
+       <include file="script-infocollector.xml" />
+
 	<include file="IncludesHomeMenuItems.xml" />
 	<include file="IncludesPVR.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />

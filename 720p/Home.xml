@@ -800,6 +800,20 @@
 				<top>70</top>
 				<onup>9000</onup>
 				<ondown>9002</ondown>
+
+<!-- Start SkyGo -->
+                                <control type="grouplist" id="50507">
+                                        <include>HomeSubMenuCommonValues</include>
+                                        <onleft>9014</onleft>
+                                        <onright>9014</onright>
+                                        <!--<visible>Control.HasFocus(50102)|ControlGroup(50507).HasFocus()</visible>-->
+                                        <visible>Container(9000).HasFocus(50507)</visible>
+                                        <!-- Buttons for the grouplist -->
+                                        <include>HomeSubMenuSkyGo</include>
+                                </control>
+<!-- Ende SkyGo -->
+
+
 <!-- Start NewsCenter -->
                                 <control type="grouplist" id="50506">
                                         <include>HomeSubMenuCommonValues</include>
@@ -1029,7 +1043,7 @@
                                                 <onclick>-</onclick>
                                                 <icon>-</icon>
                                                 <thumb>-</thumb>
-                                                <visible>!Skin.HasSetting(HomeMenuNoMovieButton) +  System.HasAddon(service.fhem.temp)</visible>
+                                                <visible>!Skin.HasSetting(HomeMenuNoMovieButton) +  System.HasAddon(plugin.program.fhemcontrol)</visible>
                                         </item>
 <!-- Haus Ende -->
                                         <item id="12">
@@ -1329,65 +1343,7 @@
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
 			</control>
-
-<!-- NewsCenter Start -->
-                        <control type="image">
-                                <description>Restmuell Icon</description>
-                                <left>1000</left>
-                                <top>5</top>
-                                <width>35</width>
-                                <height>35</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture>restmuell.png</texture>
-                                <visible>String.IsEqual(Window(Home).Property(Muellstate.Restmuell),"on")</visible>
-                        </control>
-                        <control type="image">
-                                <description>Biomuell Icon</description>
-                                <left>1050</left>
-                                <top>5</top>
-                                <width>35</width>
-                                <height>35</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture>biotonne.png</texture>
-                                <visible>String.IsEqual(Window(Home).Property(Muellstate.Biotonne),"on")</visible>
-                        </control>
-                        <control type="image">
-                                <description>Papiertonne Icon</description>
-                                <left>1100</left>
-                                <top>5</top>
-                                <width>35</width>
-                                <height>35</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture>papiertonne.png</texture>
-                                <visible>String.IsEqual(Window(Home).Property(Muellstate.Papiertonne),"on")</visible>
-                        </control>
-                        <control type="image">
-                                <description>Gelbe Tonne Icon</description>
-                                <left>1150</left>
-                                <top>5</top>
-                                <width>35</width>
-                                <height>35</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture>gelbetonne.png</texture>
-                                <visible>String.IsEqual(Window(Home).Property(Muellstate.Gelbetonne),"on")</visible>
-                        </control>
-
-
-
-
-
-
-
-                        <control type="image">
-                                <description>Unwetter Icon</description>
-                                <left>1200</left>
-                                <top>5</top>
-                                <width>35</width>
-                                <height>35</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture>wetterwarnung.png</texture>
-                                <visible>!String.IsEqual(Window(Home).Property(NewsCenter.Unwetter.Anzahl),0) + String.IsEqual(Window(Home).Property(NewsCenter.Visible.UnwetterWarnIcon),true)</visible>
-                        </control>
+                        <include>ScriptInfoCollector</include>
 <!-- NewsCenter Ende -->
 
 			<control type="button" id="21">
