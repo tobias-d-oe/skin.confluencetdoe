@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+        <include name="HomeRecentlyAddedNetflix">
+
+			<control type="group">
+				<left>190</left>
+				<top>50</top>
+				
+				<visible>Container(9000).Hasfocus(50509) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
+				<include>VisibleFadeEffect</include>
+
+
+				<control type="label" id="432432">
+					<description>Dummy label NetFlix Profile ID</description>
+					<left>1</left>
+					<top>1</top>
+					<height>10</height>
+					<width>1</width>
+					<label>$VAR[NetFlix.ProfilID]</label>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>false</visible>
+				</control>
+
+
+				<control type="label" id="432433">
+					<description>Dummy label NetFlix List ID newRelease</description>
+					<left>1</left>
+					<top>1</top>
+					<height>10</height>
+					<width>1</width>
+					<label>$VAR[NetFlix.Video_list_id.newRelease]</label>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>false</visible>
+				</control>
+
+				<control type="label" id="432434">
+					<description>Dummy label NetFlix List ID topTen</description>
+					<left>1</left>
+					<top>1</top>
+					<height>10</height>
+					<width>1</width>
+					<label>$VAR[NetFlix.Video_list_id.topTen]</label>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>false</visible>
+				</control>
+
+				<control type="label" id="432435">
+					<description>Dummy label NetFlix List ID popularTitles</description>
+					<left>1</left>
+					<top>1</top>
+					<height>10</height>
+					<width>1</width>
+					<label>$VAR[NetFlix.Video_list_id.popularTitles]</label>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>false</visible>
+				</control>
+
+				<control type="label" id="432436">
+					<description>Dummy label NetFlix List ID netflixOriginals</description>
+					<left>1</left>
+					<top>1</top>
+					<height>10</height>
+					<width>1</width>
+					<label>$VAR[NetFlix.Video_list_id.netflixOriginals]</label>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>false</visible>
+				</control>
+
+
+
+
+
+
+
+
+				<control type="label">
+					<description>Title label</description>
+					<left>180</left>
+					<top>220</top>
+					<height>20</height>
+					<width>540</width>
+					<label>Neu bei Netflix</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="list" id="8101">
+					<animation effect="slide" start="0,0" end="90,0" time="0" condition="String.IsEqual(Container(8101).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="180,0" time="0" condition="String.IsEqual(Container(8101).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="270,0" time="0" condition="String.IsEqual(Container(8101).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container(8101).NumItems,1)">conditional</animation>
+					<left>0</left>
+					<top>0</top>
+					<width>900</width>
+					<height>220</height>
+					<onleft>8101</onleft>
+					<onright>8101</onright>
+					<onup>20</onup>
+					<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+					<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="220" width="180">
+						<control type="image">
+							<description>background</description>
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="180">
+						<control type="image">
+							<description>background</description>
+							<left>0</left>
+							<top>0</top>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>Control.HasFocus(8101)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>160</width>
+							<height>170</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>!Control.HasFocus(8101)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Control.HasFocus(8101)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>185</top>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Control.HasFocus(8101)</visible>
+						</control>
+					</focusedlayout>
+					<content>plugin://plugin.video.netflix/?action=video_list&type=newRelease&video_list_id=$VAR[NetFlix.Video_list_id.newRelease]</content> 
+				</control>
+				<control type="button">
+					<description>left Arrow</description>
+					<left>-40</left>
+					<top>90</top>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-left.png</texturefocus>
+					<texturenofocus>arrow-big-left.png</texturenofocus>
+					<onclick>Control.Move(8101,-1)</onclick>
+					<visible>Control.HasFocus(8101) + Container(8101).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<description>right Arrow</description>
+					<left>910</left>
+					<top>90</top>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-right.png</texturefocus>
+					<texturenofocus>arrow-big-right.png</texturenofocus>
+					<onclick>Control.Move(8101,1)</onclick>
+					<visible>Control.HasFocus(8101) + Container(8101).HasNext</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+            </include>
+</includes>
+
+

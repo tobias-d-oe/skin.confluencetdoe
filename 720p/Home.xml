@@ -4,6 +4,7 @@
         <!--<onload condition="Window.Previous(startup)">XBMC.PlayMedia(special://skin/XBMC-Smoke-Intro.mp4)</onload>-->
         <onload condition="Window.Previous(startup)">Control.SetFocus(12)</onload>
         <onload>Skin.SetString(TVview.Mode,"50")</onload>
+
 	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="ControlGroup(9011).HasFocus">SetProperty(MusicDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
@@ -806,12 +807,34 @@
                                         <include>HomeSubMenuCommonValues</include>
                                         <onleft>9014</onleft>
                                         <onright>9014</onright>
-                                        <!--<visible>Control.HasFocus(50102)|ControlGroup(50507).HasFocus()</visible>-->
                                         <visible>Container(9000).HasFocus(50507)</visible>
                                         <!-- Buttons for the grouplist -->
                                         <include>HomeSubMenuSkyGo</include>
                                 </control>
 <!-- Ende SkyGo -->
+<!-- Start Prime -->
+                                <control type="grouplist" id="50508">
+                                        <include>HomeSubMenuCommonValues</include>
+                                        <onleft>9014</onleft>
+                                        <onright>9014</onright>
+                                        <visible>Container(9000).HasFocus(50508)</visible>
+                                        <!-- Buttons for the grouplist -->
+                                        <include>HomeSubMenuPrime</include>
+                                </control>
+<!-- Ende Prime -->
+
+
+<!-- Start Netflix -->
+                                <control type="grouplist" id="50509">
+                                        <include>HomeSubMenuCommonValues</include>
+                                        <onleft>9014</onleft>
+                                        <onright>9014</onright>
+                                        <visible>Container(9000).HasFocus(50509)</visible>
+                                        <!-- Buttons for the grouplist -->
+                                        <include>HomeSubMenuNetflix</include>
+                                </control>
+<!-- Ende Netflix -->
+
 
 
 <!-- Start NewsCenter -->
@@ -819,7 +842,6 @@
                                         <include>HomeSubMenuCommonValues</include>
                                         <onleft>9014</onleft>
                                         <onright>9014</onright>
-                                        <!--<visible>Control.HasFocus(50102)|ControlGroup(50506).HasFocus()</visible>-->
                                         <visible>Container(9000).HasFocus(7)</visible>
                                         <!-- Buttons for the grouplist -->
                                         <include>HomeSubMenuNewsWetter</include>
@@ -1053,6 +1075,7 @@
                                                 <thumb></thumb>
                                                 <visible>PVR.HasTVChannels</visible>
                                         </item>
+
                                         <!-- Skygo Start -->
                                         <item id="50507">
                                                 <label>SKYGO</label>
@@ -1071,6 +1094,28 @@
                                                  <visible>System.HasAddon(plugin.video.amazon-test)</visible>
                                          </item>
                                          <!-- Amazon Prime Ende -->
+
+                                        <!-- Netflix Start -->
+                                        <item id="50509">
+                                                <label>NETFLIX</label>
+                                                <onclick>RunAddon(plugin.video.netflix)</onclick>
+                                                <icon>-</icon>
+                                                <thumb>-</thumb>
+                                                <visible>System.HasAddon(plugin.video.netflix)</visible>
+                                                <visible>String.IsEmpty(Control.GetLabel(432432))</visible>
+                                        </item>
+                                        <item id="50509">
+                                                <label>NETFLIX</label>
+                                                <onclick>RunAddon(plugin.video.netflix, "?action=video_lists&profile_id=$VAR[NetFlix.ProfilID]")</onclick>
+                                                <icon>-</icon>
+                                                <thumb>-</thumb>
+                                                <visible>System.HasAddon(plugin.video.netflix)</visible>
+                                                <visible>!String.IsEmpty(Control.GetLabel(432432))</visible>
+                                        </item>
+
+
+                                        <!-- Netflix Ende -->
+
 					<item id="10">
 						<label>31954</label>
 						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
@@ -1195,57 +1240,6 @@
 					<include>HomeAddonItemsVideos</include>
 				</content>
 			</control>
-<!-- NewsCenter Start -->
-                        <control type="fixedlist" id="50509">
-                                <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
-                                <visible>Container(9000).HasFocus(50505)</visible>
-                                <onleft>703</onleft>
-                                <onright>703</onright>
-                                <onup>9001</onup>
-                                <ondown>20</ondown>
-                                <include>HomeAddonsCommonLayout</include>
-                                <content>
-                                        <include>HomeAddonItemsNews</include>
-                                </content>
-                        </control>
-<!-- NewsCenter Ende -->
-<!-- Skygo Start -->
-                        <control type="fixedlist" id="50510">
-                                <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
-                                <visible>Container(9000).HasFocus(50506)</visible>
-                                <onleft>703</onleft>
-                                <onright>703</onright>
-                                <onup>9001</onup>
-                                <ondown>20</ondown>
-                                <include>HomeAddonsCommonLayout</include>
-                                <content>
-                                  <include>HomeAddonItemsNews</include>
-                                </content>
-																						                        </control>
-<!-- Skygo Ende -->
-																																												<!-- Amazon Prime Start -->
-                        <control type="fixedlist" id="50510">
-                          <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
-                          <visible>Container(9000).HasFocus(50506)</visible>
-                          <onleft>703</onleft>
-                          <onright>703</onright>
-                          <onup>9001</onup>
-                          <ondown>20</ondown>
-                          <include>HomeAddonsCommonLayout</include>
-                          <content>
-                             <include>HomeAddonItemsNews</include>
-                          </content>
-                        </control>
-<!-- Amazon Prime Ende -->
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1343,8 +1337,8 @@
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
 			</control>
+
                         <include>ScriptInfoCollector</include>
-<!-- NewsCenter Ende -->
 
 			<control type="button" id="21">
 				<description>Favourites push button</description>

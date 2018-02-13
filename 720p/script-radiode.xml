@@ -9,7 +9,7 @@
                                 <control type="label">
                                         <description>Title label</description>
                                         <left>240</left>
-                                        <top>310</top>
+                                        <top>230</top>
                                         <height>20</height>
                                         <width>480</width>
                                         <label>Radio Sender</label>

@@ -20,6 +20,10 @@
 <!-- Start Skygo -->
                         <include>HomeRecentlyAddedSkygo</include>
 <!-- Ende Skygo -->
+<!-- Start Netflix -->
+                        <include>HomeRecentlyAddedNetflix</include>
+<!-- Ende Netflix -->
+
 <!-- Start Amazon Prime -->
                         <include>HomeRecentlyAddedPrime</include>
 <!-- Ende Amazon Prime -->

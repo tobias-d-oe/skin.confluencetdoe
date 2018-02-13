@@ -1,6 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+<!-- Start Prime -->
+        <include name="HomeSubMenuPrime">
+
+
+                <control type="image" id="62100">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+                </control>
+                <control type="button" id="62115">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Neue Filme</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.amazon-test/?cat=Browse&mode=listContent&opt=listcat&page=1&url=OfferGroups%3dB0043YVHMY%26ContentType%3dMovie%26OrderBy%3dAvailabilityDate%26MinAmazonRatingCount%3d40%26HideNum%3dT%26Preorder%3dF%26Detailed%3dT%26AID%3d1%26ContractID%3dUX%2a)</onclick>
+                </control>
+
+                <control type="button" id="62120">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Filme</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.amazon-test/?cat=Browse&mode=listContent&opt&page=1&url=OrderBy%3dTitle%26OfferGroups%3dB0043YVHMY%26contentType%3dmovie)</onclick>
+                </control>
+                <control type="button" id="62121">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Filme nach Genre</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.amazon-test/?cat=Browse&mode=listCategories&opt&page=1&url=0005)</onclick>
+                </control>
+                <control type="button" id="62116">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Neue Serien</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.amazon-test/?cat=Browse&mode=listContent&opt=listcat&page=1&url=OfferGroups%3dB0043YVHMY%26ContentType%3dTVEpisode%26RollUpToSeason%3dT%26OrderBy%3dAvailabilityDate%26MinAmazonRatingCount%3d40%26HideNum%3dT%26Preorder%3dF%26Detailed%3dT%26AID%3d1%26ContractID%3dUX%2a)</onclick>
+                </control>
+
+
+                <control type="button" id="62101">
+                        <include>ButtonHomeSubCommonValues</include>
+			<label>Alle Serien</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.amazon-test/?cat=Browse&mode=listContent&opt&page=1&url=OrderBy%3dTitle%26OfferGroups%3dB0043YVHMY%26contentType%3dtvseason%2ctvepisodes%26RollUpToSeries%3dT)</onclick>
+                </control>
+                <control type="button" id="62119">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Suchen</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.amazon-test/?cat=Browse&mode=Search&opt&page=1&url)</onclick>
+                </control>
+                <control type="image" id="92126">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3">HomeSubEnd.png</texture>
+                </control>
+        </include>
+
+
+
+<!-- End Prime -->
+
+
+
+
+<!-- Start Netflix -->
+        <include name="HomeSubMenuNetflix">
+
+
+                <control type="image" id="61100">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+                </control>
+                <control type="button" id="61115">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Neuerscheinungen</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.netflix/?action=video_list&type=newRelease&video_list_id=$VAR[NetFlix.Video_list_id.newRelease])</onclick>
+			<visible>!String.IsEmpty(Control.GetLabel(432433))</visible>
+                </control>
+                <control type="button" id="61101">
+                        <include>ButtonHomeSubCommonValues</include>
+			<label>Top Auswahl</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.netflix/?action=video_list&type=topTen&video_list_id=$VAR[NetFlix.Video_list_id.topTen])</onclick>
+			<visible>!String.IsEmpty(Control.GetLabel(432434))</visible>
+                </control>
+                <control type="button" id="61118">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Beliebt</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.netflix/?action=video_list&type=popularTitles&video_list_id=$VAR[NetFlix.Video_list_id.popularTitles])</onclick>
+			<visible>!String.IsEmpty(Control.GetLabel(432435))</visible>
+                </control>
+                <control type="button" id="61119">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Originale</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.netflix/?action=video_list&type=netflixOriginals&video_list_id=$VAR[NetFlix.Video_list_id.netflixOriginals])</onclick>
+			<visible>!String.IsEmpty(Control.GetLabel(432436))</visible>
+                </control>
+                <control type="button" id="61120">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Vorschläge</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.netflix/?action=user-items&type=recommendations)</onclick>
+                </control>
+                <control type="button" id="61121">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Genre</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.netflix/?action=user-items&type=genres)</onclick>
+                </control>
+
+
+                <control type="button" id="61116">
+                        <include>ButtonHomeSubCommonValues</include>
+                        <label>Suchen</label>
+                        <onclick>ActivateWindow(videos,plugin://plugin.video.netflix/?action=user-items&type=search)</onclick>
+                </control>
+                <control type="image" id="91126">
+                        <width>35</width>
+                        <height>35</height>
+                        <texture border="0,0,0,3">HomeSubEnd.png</texture>
+                </control>
+        </include>
+
+
+
+<!-- End Netflix -->
+
 
 <!-- Start Sky Go -->
         <include name="HomeSubMenuSkyGo">
@@ -527,15 +644,6 @@
                         <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
                         <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
                 </control>
-<!--                <control type="button" id="90157">
-                        <include>ButtonHomeSubCommonValues</include>
-                        <label>EPG View</label>
-                        <onclick>Skin.SetString(TVview.Mode,"5734")</onclick>
-                        <onclick>ActivateWindow(tvchannels)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-                </control>
--->
-
 
 
                 <control type="button" id="90158">
@@ -549,16 +657,6 @@
                         <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
                         <visible>Container(9000).Hasfocus(12)</visible> 
                 </control>
-<!--                <control type="button" id="90159">
-                        <include>ButtonHomeSubCommonValues</include>
-                        <label>Kanäle</label>
-                        <onclick>Skin.SetString(TVview.Mode,"5732")</onclick>
-                        <onclick>ActivateWindow(tvchannels)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-                </control>
--->
-
-
 <!-- Start TVHightlights -->
                 <control type="button" id="97155">
                         <include>ButtonHomeSubCommonValues</include>
@@ -570,31 +668,7 @@
                         <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
                         <visible>Container(9000).Hasfocus(12)</visible> 
                 </control>
-<!--                <control type="button" id="97149">
-                        <include>ButtonHomeSubCommonValues</include>
-                        <label>$ADDON[plugin.program.tvhighlights 30011]</label>
-			<onclick>RunScript(plugin.program.tvhighlights,"?methode=show_select_dialog")</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-                </control>
--->
 <!-- Ende TVHightlights -->
-<!--
-		<control type="button" id="90150">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19019</label>
-			<onclick>ActivateWindow(TVChannels)</onclick>
-                        <ondown>474747</ondown>
-                        <visible>Container(9000).Hasfocus(12) + !String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible> 
-		</control>
--->
-<!--
-		<control type="button" id="90143">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19019</label>
-			<onclick>ActivateWindow(TVChannels)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-		</control>
--->
 		<control type="button" id="90151">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>22020</label>
@@ -606,59 +680,6 @@
                         <visible>Container(9000).Hasfocus(12)</visible> 
 	 	</control>
 
-<!--		<control type="button" id="90144">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>22020</label>
-			<onclick>ActivateWindow(TVGuide)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-		</control>
--->
-<!--
-		<control type="button" id="90152">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19163</label>
-			<onclick>ActivateWindow(TVRecordings)</onclick>
-
-                        <ondown condition="Control.IsVisible(494949) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4949491</ondown>
-                        <ondown condition="!String.IsEmpty(Window(Home).Property(RemoteKodi.Active))">4747471</ondown>
-                        <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
-                        <visible>Container(9000).Hasfocus(12)</visible> 
-	 	</control>
-		<control type="button" id="90145">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19163</label>
-			<onclick>ActivateWindow(TVRecordings)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-		</control>
-
-		<control type="button" id="90153">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19138</label>
-			<onclick>ActivateWindow(TVTimerRules)</onclick>
-			<ondown>474747</ondown>
-			<visible>Container(9000).Hasfocus(12) + !String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible> 
-		</control>
-		<control type="button" id="90146">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19138</label>
-			<onclick>ActivateWindow(TVTimerRules)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-		</control>
-
-		<control type="button" id="90154">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19040</label>
-			<onclick>ActivateWindow(TVTimers)</onclick>
-			<ondown>474747</ondown>
-			<visible>Container(9000).Hasfocus(12) + !String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible> 
-		</control>
-		<control type="button" id="90147">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19040</label>
-			<onclick>ActivateWindow(TVTimers)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-		</control>
--->
 		<control type="button" id="90155">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>137</label>
@@ -669,13 +690,6 @@
                         <ondown condition="String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) + !Control.IsVisible(494949)">20</ondown>
                         <visible>Container(9000).Hasfocus(12)</visible> 
 		</control>
-<!--		<control type="button" id="90148">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>137</label>
-			<onclick>ActivateWindow(TVSearch)</onclick>
-			<visible>Container(9000).Hasfocus(12) + String.IsEmpty(Window(Home).Property(RemoteKodi.Active)) </visible>
-		</control>
--->
 		<control type="image" id="90149">
 			<width>35</width>
 			<height>35</height>
@@ -706,35 +720,6 @@
 		</control>
 
 
-
-<!--
-		<control type="button" id="90244">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>22020</label>
-			<onclick>ActivateWindow(RadioGuide)</onclick>
-		</control>
-		<control type="button" id="90245">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19163</label>
-			<onclick>ActivateWindow(RadioRecordings)</onclick>
-		</control>
-		<control type="button" id="90246">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19138</label>
-			<onclick>ActivateWindow(RadioTimerRules)</onclick>
-		</control>
-		<control type="button" id="90247">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>19040</label>
-			<onclick>ActivateWindow(RadioTimers)</onclick>
-		</control>
-		<control type="button" id="90248">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>137</label>
-			<onclick>ActivateWindow(RadioSearch)</onclick>
-		</control>
-
--->
 		<control type="image" id="90249">
 			<width>35</width>
 			<height>35</height>
