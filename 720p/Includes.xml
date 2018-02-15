@@ -74,26 +74,6 @@
 	<constant name="DepthSideBlade">0.15</constant>
 	<!-- VARIABLES -->
 
-
-<!-- Netflix Start -->
-	<variable name="NetFlix.ProfilID">
-		<value></value>
-	</variable>
-	<variable name="NetFlix.Video_list_id.newRelease">
-		<value></value>
-	</variable>
-	<variable name="NetFlix.Video_list_id.topTen">
-		<value></value>
-	</variable>
-	<variable name="NetFlix.Video_list_id.popularTitles">
-		<value></value>
-	</variable>
-	<variable name="NetFlix.Video_list_id.netflixOriginals">
-		<value></value>
-	</variable>
-<!-- Netflix End -->
-
-
 	<variable name="GameSelectHeader">
 		<value condition="Window.IsActive(gamevideofilter)">$LOCALIZE[230]</value>
 		<value condition="Window.IsActive(gameviewmode)">$LOCALIZE[629]</value>

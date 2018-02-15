@@ -1102,18 +1102,7 @@
                                                 <icon>-</icon>
                                                 <thumb>-</thumb>
                                                 <visible>System.HasAddon(plugin.video.netflix)</visible>
-                                                <visible>String.IsEmpty(Control.GetLabel(432432))</visible>
                                         </item>
-                                        <item id="50509">
-                                                <label>NETFLIX</label>
-                                                <onclick>RunAddon(plugin.video.netflix, "?action=video_lists&profile_id=$VAR[NetFlix.ProfilID]")</onclick>
-                                                <icon>-</icon>
-                                                <thumb>-</thumb>
-                                                <visible>System.HasAddon(plugin.video.netflix)</visible>
-                                                <visible>!String.IsEmpty(Control.GetLabel(432432))</visible>
-                                        </item>
-
-
                                         <!-- Netflix Ende -->
 
 					<item id="10">

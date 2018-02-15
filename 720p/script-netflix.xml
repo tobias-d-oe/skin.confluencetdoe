@@ -10,76 +10,6 @@
 				<include>VisibleFadeEffect</include>
 
 
-				<control type="label" id="432432">
-					<description>Dummy label NetFlix Profile ID</description>
-					<left>1</left>
-					<top>1</top>
-					<height>10</height>
-					<width>1</width>
-					<label>$VAR[NetFlix.ProfilID]</label>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>false</visible>
-				</control>
-
-
-				<control type="label" id="432433">
-					<description>Dummy label NetFlix List ID newRelease</description>
-					<left>1</left>
-					<top>1</top>
-					<height>10</height>
-					<width>1</width>
-					<label>$VAR[NetFlix.Video_list_id.newRelease]</label>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>false</visible>
-				</control>
-
-				<control type="label" id="432434">
-					<description>Dummy label NetFlix List ID topTen</description>
-					<left>1</left>
-					<top>1</top>
-					<height>10</height>
-					<width>1</width>
-					<label>$VAR[NetFlix.Video_list_id.topTen]</label>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>false</visible>
-				</control>
-
-				<control type="label" id="432435">
-					<description>Dummy label NetFlix List ID popularTitles</description>
-					<left>1</left>
-					<top>1</top>
-					<height>10</height>
-					<width>1</width>
-					<label>$VAR[NetFlix.Video_list_id.popularTitles]</label>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>false</visible>
-				</control>
-
-				<control type="label" id="432436">
-					<description>Dummy label NetFlix List ID netflixOriginals</description>
-					<left>1</left>
-					<top>1</top>
-					<height>10</height>
-					<width>1</width>
-					<label>$VAR[NetFlix.Video_list_id.netflixOriginals]</label>
-					<font>font12_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>false</visible>
-				</control>
-
-
-
-
-
 
 
 
@@ -206,7 +136,7 @@
 							<visible>Control.HasFocus(8101)</visible>
 						</control>
 					</focusedlayout>
-					<content>plugin://plugin.video.netflix/?action=video_list&type=newRelease&video_list_id=$VAR[NetFlix.Video_list_id.newRelease]</content> 
+					<content>plugin://plugin.video.netflix/?action=video_list&type=newRelease</content> 
 				</control>
 				<control type="button">
 					<description>left Arrow</description>
