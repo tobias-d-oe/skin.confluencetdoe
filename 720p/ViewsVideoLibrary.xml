@@ -1774,7 +1774,9 @@
 					<height>440</height>
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture background="true">$VAR[PosterThumb]</texture>
+<!-- TDOE -->
+					<!--<texture background="true">$VAR[PosterThumb]</texture>-->
+					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 				</control>

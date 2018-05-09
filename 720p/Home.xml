@@ -537,10 +537,10 @@
 				<pulseonselect>false</pulseonselect>
 				<label>137</label>
 				<onclick>RunScript(script.globalsearch)</onclick>
-				<textureradioonfocus>icon_search.png</textureradioonfocus>
-				<textureradioonnofocus>icon_search.png</textureradioonnofocus>
-				<textureradioofffocus>icon_search.png</textureradioofffocus>
-				<textureradiooffnofocus>icon_search.png</textureradiooffnofocus>
+				<textureradioonfocus>icon_search_home.png</textureradioonfocus>
+				<textureradioonnofocus>icon_search_home.png</textureradioonnofocus>
+				<textureradioofffocus>icon_search_home.png</textureradioofffocus>
+				<textureradiooffnofocus>icon_search_home.png</textureradiooffnofocus>
 				<onleft>607</onleft>
 				<onright>601</onright>
 				<onup>9003</onup>
@@ -807,6 +807,7 @@
                                         <include>HomeSubMenuCommonValues</include>
                                         <onleft>9014</onleft>
                                         <onright>9014</onright>
+                                        <!--<visible>Control.HasFocus(50102)|ControlGroup(50507).HasFocus()</visible>-->
                                         <visible>Container(9000).HasFocus(50507)</visible>
                                         <!-- Buttons for the grouplist -->
                                         <include>HomeSubMenuSkyGo</include>
@@ -817,6 +818,7 @@
                                         <include>HomeSubMenuCommonValues</include>
                                         <onleft>9014</onleft>
                                         <onright>9014</onright>
+                                        <!--<visible>Control.HasFocus(50102)|ControlGroup(50508).HasFocus()</visible>-->
                                         <visible>Container(9000).HasFocus(50508)</visible>
                                         <!-- Buttons for the grouplist -->
                                         <include>HomeSubMenuPrime</include>
@@ -829,6 +831,7 @@
                                         <include>HomeSubMenuCommonValues</include>
                                         <onleft>9014</onleft>
                                         <onright>9014</onright>
+                                        <!--<visible>Control.HasFocus(50102)|ControlGroup(50509).HasFocus()</visible>-->
                                         <visible>Container(9000).HasFocus(50509)</visible>
                                         <!-- Buttons for the grouplist -->
                                         <include>HomeSubMenuNetflix</include>
@@ -842,6 +845,7 @@
                                         <include>HomeSubMenuCommonValues</include>
                                         <onleft>9014</onleft>
                                         <onright>9014</onright>
+                                        <!--<visible>Control.HasFocus(50102)|ControlGroup(50506).HasFocus()</visible>-->
                                         <visible>Container(9000).HasFocus(7)</visible>
                                         <!-- Buttons for the grouplist -->
                                         <include>HomeSubMenuNewsWetter</include>
@@ -1232,6 +1236,11 @@
 
 
 
+
+
+
+
+
 			<control type="fixedlist" id="703">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
 				<visible>Container(9000).HasFocus(3)</visible>
@@ -1326,7 +1335,6 @@
 				<aspectratio>keep</aspectratio>
 				<texture>icon_power.png</texture>
 			</control>
-
                         <include>ScriptInfoCollector</include>
 
 			<control type="button" id="21">

@@ -267,7 +267,8 @@
                                         <font>font28</font>
                                         <align>left</align>
                                         <aligny>center</aligny>
-                                        <label>$INFO[Player.StartTime(hh:mm)]</label>
+                                        <label>$INFO[VideoPlayer.StartTime(hh:mm)]</label>
+                                        <!--<label>BBB $INFO[PVR.EpgEventStartTime]</label>-->
                                 </control>
 
                                 <control type="label" id="1">
@@ -292,8 +293,22 @@
                                         <font>font28</font>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <label>+ $INFO[VideoPlayer.TimeRemaining(hh:mm)]</label>
+                                        <!--<label>+ $INFO[VideoPlayer.TimeRemaining(hh:mm)]</label>-->
+                                        <label>+ $INFO[PVR.EpgEventRemainingTime]</label>
                                 </control>
+                                <control type="label" id="1">
+                                        <visible>VideoPlayer.Content(LiveTV) + !String.IsEqual(PVR.TimeshiftOffset,00:00) + !String.IsEqual(PVR.TimeshiftOffset,00:01) + !String.IsEqual(PVR.TimeshiftOffset,00:02) + !String.IsEqual(PVR.TimeshiftOffset,00:03) + !String.IsEqual(PVR.TimeshiftOffset,00:04) + !String.IsEqual(PVR.TimeshiftOffset,00:05)</visible>
+                                        <left>690</left>
+                                        <top>20</top>
+                                        <width>300</width>
+                                        <height>30</height>
+                                        <font>font28</font>
+                                        <align>left</align>
+                                        <aligny>center</aligny>
+                                        <!--<label>+ $INFO[VideoPlayer.TimeRemaining(hh:mm)]</label>-->
+                                        <label>Timeshifting ( -$INFO[PVR.TimeshiftOffset] )</label>
+                                </control>
+
 
 <!-- End Current EPG --> 
 <!-- Begin Next EPG --> 
@@ -342,7 +357,8 @@
                                         <top>55</top>
                                         <width>530</width>
                                         <height>16</height>
-                                        <info>Player.ProgressCache</info>
+                                        <!--<info>Player.ProgressCache</info>-->
+                                        <info>PVR.EpgEventProgress</info>
                                         <midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
                                         <visible>!Player.ChannelPreviewActive + VideoPlayer.Content(LiveTV)</visible>
                                 </control>
@@ -352,7 +368,8 @@
                                         <top>55</top>
                                         <width>530</width>
                                         <height>16</height>
-                                        <info>Player.Progress</info>
+                                        <!--<info>Player.Progress</info>-->
+                                        <info>PVR.EpgEventProgress</info>
                                         <visible>VideoPlayer.Content(LiveTV)</visible>
                                 </control>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.confluencetdoe" version="4.1.9" name="Confluence TDOe 18" provider-name="TDOe">
+<addon id="skin.confluencetdoe" version="4.2.0" name="Confluence TDOe 18" provider-name="TDOe">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0"/>
 	</requires>

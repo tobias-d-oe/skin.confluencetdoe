@@ -129,30 +129,7 @@
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 -->
-                        <control type="button" id="3807">
-                                <width>55</width>
-                                <height>55</height>
-                                <font></font>
-                                <texturefocus>OSDrezapFO.png</texturefocus>
-                                <texturenofocus>OSDrezapNF.png</texturenofocus>
-                                <label></label>
-                                <onclick>RunAddon(service.rezap)</onclick> 
-                                <visible>VideoPlayer.Content(LiveTV) +  System.HasAddon(service.rezap)</visible>
-                        </control>
-
-
-			<control type="button" id="306">
-				<width>55</width>
-				<height>55</height>
-				<label></label>
-				<font></font>
-				<texturefocus>OSDChannelListFO.png</texturefocus>
-				<texturenofocus>OSDChannelListNF.png</texturenofocus>
-				<onclick>ActivateWindow(PVROSDChannels)</onclick>
-				<onclick>Dialog.Close(VideoOSD)</onclick>
-				<visible>VideoPlayer.Content(LiveTV)</visible>
-			</control>
-                        <control type="button" id="3809">
+                       <control type="button" id="3809">
                                 <width>55</width>
                                 <height>55</height>
                                 <font></font>
@@ -167,6 +144,40 @@
                         </control>
 
 
+
+
+			<control type="button" id="306">
+				<width>55</width>
+				<height>55</height>
+				<label></label>
+				<font></font>
+				<texturefocus>OSDChannelListFO.png</texturefocus>
+				<texturenofocus>OSDChannelListNF.png</texturenofocus>
+				<onclick>ActivateWindow(PVROSDChannels)</onclick>
+				<onclick>Dialog.Close(VideoOSD)</onclick>
+				<visible>VideoPlayer.Content(LiveTV)</visible>
+			</control>
+                        <control type="button" id="3806">
+                                <width>55</width>
+                                <height>55</height>
+                                <font></font>
+                                <texturefocus>OSDadzapFO.png</texturefocus>
+                                <texturenofocus>OSDadzapNF.png</texturenofocus>
+                                <label></label>
+                                <onclick>RunAddon(script.adzapper)</onclick> 
+                                <visible>VideoPlayer.Content(LiveTV) +  System.HasAddon(script.adzapper)</visible>
+                        </control>
+                         <control type="button" id="3807">
+                                <width>55</width>
+                                <height>55</height>
+                                <font></font>
+                                <texturefocus>OSDrezapFO.png</texturefocus>
+                                <texturenofocus>OSDrezapNF.png</texturenofocus>
+                                <label></label>
+                                <onclick>RunAddon(service.rezap)</onclick> 
+                                <visible>VideoPlayer.Content(LiveTV) +  System.HasAddon(service.rezap)</visible>
+                        </control>
+ 
 			<control type="button" id="307">
 				<width>55</width>
 				<height>55</height>

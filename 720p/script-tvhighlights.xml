@@ -304,7 +304,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.1.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.1.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.1.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.1.Channel))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.1.Channel))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.2.Channel)]</property>
@@ -317,7 +317,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.2.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.2.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.2.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.2.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.2.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.3.Channel)]</property>
@@ -330,7 +330,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.3.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.3.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.3.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.3.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.3.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.4.Channel)]</property>
@@ -343,7 +343,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.4.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.4.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.4.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.4.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.4.Title))</visible>
                                         </item> 
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.5.Channel)]</property>
@@ -356,7 +356,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.5.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.5.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.5.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.5.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.5.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.6.Channel)]</property>
@@ -369,7 +369,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.6.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.6.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.6.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.6.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.6.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.7.Channel)]</property>
@@ -382,7 +382,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.7.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.7.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.7.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.7.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.7.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.8.Channel)]</property>
@@ -395,7 +395,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.8.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.8.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.8.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.8.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.8.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.9.Channel)]</property>
@@ -408,7 +408,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.9.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.9.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.9.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.9.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.9.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.10.Channel)]</property>
@@ -421,7 +421,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.10.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.10.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.10.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.10.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.10.Title))</visible>
                                         </item>                                        
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.11.Channel)]</property>
@@ -434,7 +434,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.11.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.11.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.11.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.11.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.11.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.12.Channel)]</property>
@@ -447,7 +447,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.12.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.12.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.12.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.12.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.12.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.13.Channel)]</property>
@@ -460,7 +460,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.13.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.13.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.13.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.13.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.13.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.14.Channel)]</property>
@@ -473,7 +473,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.14.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.14.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.14.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.14.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.14.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.15.Channel)]</property>
@@ -486,7 +486,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.15.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.15.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.15.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.15.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.15.Title))</visible>
                                         </item>
                                         <item>
                                                 <property name="channel">$INFO[Window.Property(TVHighlightsToday.16.Channel)]</property>
@@ -499,7 +499,7 @@
                                                 <label2>$INFO[Window.Property(TVHighlightsToday.16.Time)]</label2>
                                                 <onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.16.Popup)]")</onclick>
                                                 <thumb>$INFO[Window.Property(TVHighlightsToday.16.Thumb)]</thumb>
-                                                <visible>!IsEmpty(Window.Property(TVHighlightsToday.16.Title))</visible>
+                                                <visible>!String.IsEmpty(Window.Property(TVHighlightsToday.16.Title))</visible>
                                         </item>                                        
                                 </content>
                         </control>
